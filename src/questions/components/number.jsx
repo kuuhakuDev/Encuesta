@@ -37,15 +37,22 @@ export default function FormattedInputs() {
     numberformat: '0',
   });
 
+  const [number, setNumber] = React.useState(0);
+
     useEffect(() => {
         
     });
   
     const handleChange = (event) => {
-        setValues({
-          ...values,
-          [event.target.name]: event.target.value,
-        });
+      var num = event.target.value;
+      setValues({
+        ...values,
+        [event.target.name]: num,
+      });
+      if(num != 0){
+
+      }
+      console.log(num);
     };
 
   return (

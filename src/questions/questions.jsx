@@ -49,13 +49,27 @@ export const questions =
         type: "radio",
         next: {
             disabled: true,
-            index: 'two'
+            index: 'three',
+            menu: ["three", "three"]
         },
         back: {
             disabled: false,
             index: 'one'
         },
         name: 'two'
+    },
+    three: {
+        title: "¿Cuánto le costó la página web?",
+        type: "number",
+        next: {
+            disabled: true,
+            index: "four"
+        },
+        back: {
+            disabled: false,
+            index: 'two'
+        },
+        name: 'three'
     },
     twentyfive: {
         title: "Soy veinticinco :v",

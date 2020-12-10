@@ -1,8 +1,9 @@
-import React, {useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import NumberFormat from 'react-number-format';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
+import {AppContext, questions} from '../questions'
 
 function NumberFormatCustom(props) {
   const { inputRef, onChange, ...other } = props;
@@ -36,8 +37,9 @@ export default function FormattedInputs() {
   const [values, setValues] = React.useState({
     numberformat: '0',
   });
-
-  const [number, setNumber] = React.useState(0);
+  const [change, setChange] = React.useState(true);
+  //const [number, setNumber] = React.useState(0);
+  const [state, setState] = useContext(AppContext);
 
     useEffect(() => {
         
@@ -50,9 +52,33 @@ export default function FormattedInputs() {
         [event.target.name]: num,
       });
       if(num != 0){
-
+        setState({
+          title: state.title,
+          content: state.content,
+          type: state.type,
+          next: {
+              disabled: false,
+              index: state.next.index
+          },
+          back: state.back,
+          name: state.name
+        })
+        setChange(false);
+        console.log("dentro");
+      }else{
+        setState({
+          title: state.title,
+          content: state.content,
+          type: state.type,
+          next: {
+              disabled: true,
+              index: state.next.index
+          },
+          back: state.back,
+          name: state.name
+        })
+        setChange(true);
       }
-      console.log(num);
     };
 
   return (

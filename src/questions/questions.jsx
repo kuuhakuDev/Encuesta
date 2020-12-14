@@ -103,6 +103,50 @@ export const questions =
         },
         name: 'five'
     },
+    six: {
+        title: "¿Todavía usa la página web?",
+        content: [
+            "Si",
+            "No"
+        ],
+        type: "radio",
+        next: {
+            disabled: true,
+            index: "",
+            menu: ["eight", "seven"]
+        },
+        back: {
+            disabled: false,
+            index: 'five'
+        },
+        name: 'six'
+    },
+    seven: {
+        title: "¿Por qué motivo lo dejo de usar?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "eight"
+        },
+        back: {
+            disabled: false,
+            index: 'six'
+        },
+        name: 'seven'
+    },
+    eight:{
+        title: "¿Cuáles fueron las circunstancias que lo llevaron a pensar que necesitaba una página web?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "nine"
+        },
+        back: {
+            disabled: false,
+            index: 'six'
+        },
+        name: 'eight'
+    },
     twentyfive: {
         title: "Soy veinticinco :v",
         content: [

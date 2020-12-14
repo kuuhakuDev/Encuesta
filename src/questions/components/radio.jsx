@@ -26,8 +26,13 @@ export default function Group(prop) {
 
         setTextDisabled(e.target.value == 'Otro'? false: true);
         
-        var passed = (e.target.value == "Otro" && inp.value == "")? true: false;
-        console.log(inp.value)
+        var passed = false;
+        if(e.target.value == "Otro"){
+            if(inp.value == "") passed = true;
+        } 
+        
+
+        //console.log(inp.value)
         setState({
             title: state.title,
             content: state.content,

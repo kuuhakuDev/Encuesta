@@ -72,7 +72,36 @@ export const questions =
         name: 'three'
     },
     four: {
-
+        title: "¿Cuánto le cuestan los servicios para mantenerlo en internet?",
+        type: "number",
+        next: {
+            disabled: true,
+            index: "five"
+        },
+        back: {
+            disabled: false,
+            index: 'three'
+        },
+        name: 'four'
+    },
+    five: {
+        title: "¿Estos servicios los paga de manera mensual o anual?",
+        content: [
+            "Mensual",
+            "Anual",
+            "Otro"
+        ],
+        type: "radio",
+        next: {
+            disabled: true,
+            index: "",
+            menu: ["six", "six", "six"]
+        },
+        back: {
+            disabled: false,
+            index: 'four'
+        },
+        name: 'five'
     },
     twentyfive: {
         title: "Soy veinticinco :v",

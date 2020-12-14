@@ -41,9 +41,13 @@ export default function FormattedInputs() {
   //const [number, setNumber] = React.useState(0);
   const [state, setState] = useContext(AppContext);
 
-    useEffect(() => {
-        
-    });
+  useEffect(() => {
+    var num = 0;
+      setValues({
+        ...values,
+        numberformat: num,
+      });
+  }, [state.title]);
   
     const handleChange = (event) => {
       var num = event.target.value;

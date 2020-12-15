@@ -1,23 +1,21 @@
 import React, {useContext, useEffect, useState} from 'react';
 import Grid from '@material-ui/core/Grid';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
 import TextField from '@material-ui/core/TextField';
 import {AppContext, questions} from '../questions'
 
 export default function Group(prop) {
     const [state, setState] = useContext(AppContext);
+    const [value, setValue] = useState("");
 
-    /* useEffect(() => {
-        var c = prop.content.map((con) => false);
-        setCheck(c);
-    }, [state.title]); */
+    useEffect(() => {
+        setValue("");
+    }, [state.title]);
 
     function onChange(e){
+        setValue(e.target.value);
         var passed = (e.target.value == "")? true: false;
+
         setState({
             title: state.title,
             content: state.content,
@@ -36,7 +34,7 @@ export default function Group(prop) {
         <Grid item justify="center" container>
             <FormControl component="fieldset">
                 <TextField id="textArea" label="Escriba su respuesta" multiline
-          rows={5} onChange={onChange} variant="outlined"/>
+          rows={5} onChange={onChange} variant="outlined" value={value}/>
             </FormControl>
         </Grid>
     )

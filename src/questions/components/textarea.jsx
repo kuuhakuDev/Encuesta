@@ -32,9 +32,9 @@ export default function Group(prop) {
 
     return (
         <Grid item justify="center" container>
-            <FormControl component="fieldset">
+            <FormControl fullWidth component="fieldset">
                 <TextField id="textArea" label="Escriba su respuesta" multiline
-          rows={5} onChange={onChange} variant="outlined" value={value}/>
+          rows={3} onChange={onChange} variant="outlined" value={value}/>
             </FormControl>
         </Grid>
     )

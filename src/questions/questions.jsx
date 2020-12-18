@@ -32,7 +32,7 @@ export const questions =
         next: {
             disabled: true,
             index: "",
-            menu: ["two", "two", "twentyfive", "two"]
+            menu: ["two", "two", "nineteen", "two"]
         },
         back: {
             disabled: false,
@@ -50,7 +50,7 @@ export const questions =
         next: {
             disabled: true,
             index: 'three',
-            menu: ["three", "three"]
+            menu: ["three", "twelve"]
         },
         back: {
             disabled: false,
@@ -146,6 +146,230 @@ export const questions =
             index: 'six'
         },
         name: 'eight'
+    },//
+    nine:{
+        title: "¿Cómo empezó a buscar a una persona o empresa que le hiciera la página web?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "ten"
+        },
+        back: {
+            disabled: false,
+            index: 'eight'
+        },
+        name: 'nine'
+    },//
+    ten:{
+        title: "¿Cuáles fueron las razones que lo llevaron a escoger el servicio actual?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "eleven"
+        },
+        back: {
+            disabled: false,
+            index: 'nine'
+        },
+        name: 'ten'
+    },//¿Cuál es el uso que le das actualmente a la página web?
+    eleven:{
+        title: "¿Cuál es el uso que le das actualmente a la página web?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "finish"
+        },
+        back: {
+            disabled: false,
+            index: 'ten'
+        },
+        name: 'eleven'
+    },
+    twelve:{
+        title: "¿A usted le gustaría tener una página web? Y por qué?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "thriteen"
+        },
+        back: {
+            disabled: false,
+            index: 'two'
+        },
+        name: 'twelve'
+    },
+    thriteen:{
+        title: "¿Cuánto invertiría usted en una página web?",
+        type: "number",
+        next: {
+            disabled: true,
+            index: "fourteen"
+        },
+        back: {
+            disabled: false,
+            index: 'twelve'
+        },
+        name: 'thriteen'
+    },
+    fourteen:{
+        title: "¿Cómo le gustaría la forma de pago?",
+        content: [
+            "Mensual",
+            "Anual",
+            "Otro"
+        ],
+        type: "radio",
+        next: {
+            disabled: true,
+            index: "",
+            menu: ["fiveteen", "fiveteen", "fiveteen"]
+        },
+        back: {
+            disabled: false,
+            index: 'thriteen'
+        },
+        name: 'fourteen'
+    },//A buscado personas o empresas que ofrezcan estos mismos servicios?
+    fiveteen:{
+        title: "¿A buscado personas o empresas que ofrezcan estos mismos servicios?",
+        content: [
+            "Si",
+            "No"
+        ],
+        type: "radio",
+        next: {
+            disabled: true,
+            index: "",
+            menu: ["sixteen", "seventeen"]
+        },
+        back: {
+            disabled: false,
+            index: 'fourteen'
+        },
+        name: 'fiveteen'
+    },//Porque no ha adquirido ninguno de sus servicios?
+    sixteen:{
+        title: "¿Porque no ha adquirido ninguno de sus servicios?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "seventeen"
+        },
+        back: {
+            disabled: false,
+            index: 'fiveteen'
+        },
+        name: 'sixteen'
+    },//¿Qué tipo de página web quiere tener?
+    seventeen:{
+        title: "¿Qué tipo de página web quiere tener?",
+        content: [
+            "Blog",
+            "Tienda Online",
+            "Web Corporativa",
+            "Foro",
+            "Sitio de Descargas",
+            "Sitio de Noticias",
+            "Sitio de Videos",
+            "Sitio Eduvativo",
+            "Otro"
+        ],
+        type: "radio",
+        next: {
+            disabled: true,
+            index: "",
+            menu: ["eighteen", "eighteen", "eighteen", "eighteen", 
+            "eighteen", "eighteen", "eighteen", "eighteen", "eighteen"]
+        },
+        back: {
+            disabled: false,
+            index: 'sixteen'
+        },
+        name: 'seventeen'
+    },//¿Cuál es el uso que le dará a la página web?
+    eighteen:{
+        title: "¿Cuál es el uso que le dará a la página web?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "finish"
+        },
+        back: {
+            disabled: false,
+            index: 'seventeen'
+        },
+        name: 'eighteen'
+    },//Alguna vez has brindado servicios de alojamiento o creación de páginas web?
+    nineteen:{
+        title: "¿Alguna vez has brindado servicios de alojamiento o creación de páginas web?",
+        content: [
+            "Si",
+            "No"
+        ],
+        type: "radio",
+        next: {
+            disabled: true,
+            index: "",
+            menu: ["twenty", "twenty-one"]
+        },
+        back: {
+            disabled: false,
+            index: 'one'
+        },
+        name: 'nineteen'
+    },//¿Cuánto te cuestan los servicios de alojamiento por cada sitio web?
+    twenty:{
+        title: "¿Cuánto te cuestan los servicios de alojamiento por cada sitio web?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "twentyone"
+        },
+        back: {
+            disabled: false,
+            index: 'nineteen'
+        },
+        name: 'twenty'
+    },//¿Cuánto cobras por hacer una página web?
+    twentyone:{
+        title: "¿Cuánto cobras por hacer una página web?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "twentytwo"
+        },
+        back: {
+            disabled: false,
+            index: 'twenty'
+        },
+        name: 'twentyone'
+    },//¿Qué tecnologías utilizas para crearla?
+    twentytwo:{
+        title: "¿Qué tecnologías utilizas para crearla?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "twentythree"
+        },
+        back: {
+            disabled: false,
+            index: 'twentyone'
+        },
+        name: 'twentytwo'
+    },//Si encontraras un servicio de alojamiento más barato, ¿lo utilizarías? y porque.
+    twentythree:{
+        title: "Si encontraras un servicio de alojamiento más economico, ¿lo utilizarías? y porque.?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "finish"
+        },
+        back: {
+            disabled: false,
+            index: 'twentytwo'
+        },
+        name: 'twentythree'
     },
     twentyfive: {
         title: "Soy veinticinco :v",
@@ -163,7 +387,35 @@ export const questions =
             index: 'one'
         },
         name: 'two'
-    }
+    },
+    finish: {
+        title: "Nos gustaría que proporcione alguna forma de contacto para que poder comunicarnos con usted en caso de querer hacerle otra encuesta u ofrecer algún producto o servicio de este ámbito.",
+        type: "textarea",
+        next: {
+            disabled: false,
+            index: 'finish2'
+        },
+        back: {
+            disabled: true,
+            //index: 'one'
+        },
+        name: 'finish',
+        reply: ''
+    },
+    finish2: {
+        title: "Agradecemos mucho tu tiempo en esta encuesta, las respuestas las utilizaremos para brindar servicios de este ámbito pero teniendo en cuenta las necesidades y el bolsillos de ustedes. ¡¡Muchas Gracias!!",
+        type: "finish",
+        next: {
+            disabled: true,
+            index: 'one'
+        },
+        back: {
+            disabled: true,
+            //index: 'one'
+        },
+        name: 'finish2',
+        reply: ''
+    },
 }
 
 export default ({ children }) =>{

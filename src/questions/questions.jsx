@@ -187,7 +187,25 @@ export const questions =
         name: 'eleven'
     },
     twelve:{
-        title: "¿A usted le gustaría tener una página web? Y por qué?",
+        title: "¿A usted le gustaría tener una página web?",
+        content: [
+            "Si",
+            "No"
+        ],
+        type: "radio",
+        next: {
+            disabled: true,
+            index: "thriteen",
+            menu: ["twelveyes", "twelveno"]
+        },
+        back: {
+            disabled: false,
+            index: 'two'
+        },
+        name: 'twelve'
+    },
+    twelveyes:{
+        title: "¿Porque considera necesario tener una página web?",
         type: "textarea",
         next: {
             disabled: true,
@@ -195,9 +213,22 @@ export const questions =
         },
         back: {
             disabled: false,
-            index: 'two'
+            index: 'twelve'
         },
-        name: 'twelve'
+        name: 'twelveyes'
+    },
+    twelveno:{
+        title: "¿Porque considera que no necesita tener una página web?",
+        type: "textarea",
+        next: {
+            disabled: true,
+            index: "finish"
+        },
+        back: {
+            disabled: false,
+            index: 'twelve'
+        },
+        name: 'twelveno'
     },
     thriteen:{
         title: "¿Cuánto invertiría usted en una página web?",

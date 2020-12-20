@@ -48,7 +48,7 @@ export default function FormattedInputs() {
         numberformat: num,
       });
   }, [state.title]);
-  
+
     const handleChange = (event) => {
       var num = event.target.value;
       setValues({

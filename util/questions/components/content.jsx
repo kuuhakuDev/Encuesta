@@ -7,12 +7,13 @@ import {AppContext, questions} from '../questions';
 
 import Text from './text';
 import Number from './number';
+import TextArea from './textarea';
+import Checkbox from './checkbox';
 
 function Content(props) {
     //const [zero, setZero] = useState(props.value);
     const [state, setState] = useContext(AppContext);
-    
-    console.log(state.content)
+    //console.log(state.content)
     return(
         <Grid container spacing={2}  justify="center" direction="column">
             <Grid item>
@@ -27,12 +28,14 @@ function Content(props) {
                     <Radio content={state.content}/>:
                 (state.type == 'number')?
                     <Number />:
+                (state.type == 'textarea')?
+                    <TextArea />:
+                (state.type == 'checkbox')?
+                    <Checkbox content={state.content}/>:
                     <div></div>
             }
         </Grid>
     )
-    
-    
 }
 
 export default Content

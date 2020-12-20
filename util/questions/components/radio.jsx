@@ -25,12 +25,11 @@ export default function Group(prop) {
         setCheck(prop.content.map((c) => c === e.target.value? true: false));
 
         setTextDisabled(e.target.value == 'Otro'? false: true);
-        
+
         var passed = false;
         if(e.target.value == "Otro"){
             if(inp.value == "") passed = true;
-        } 
-        
+        }
 
         //console.log(inp.value)
         setState({
@@ -75,13 +74,12 @@ export default function Group(prop) {
         </Grid>
     )
 }
-  
+
 function KRadio(prop){
-    return prop.content.map((con, index) => 
+    return prop.content.map((con, index) =>
         <div>
             <FormControlLabel key={index} value={con} control={<Radio color="primary" checked={prop.check[index]}/>} label={con} />
             {con == 'Otro' && <div><br/><TextField id="standard-basic" label="Espesifique su respuesta  " disabled={prop.disabled} onChange={prop.onChange}/></div>}
         </div>
-        
     )
 }

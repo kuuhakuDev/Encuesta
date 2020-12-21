@@ -413,7 +413,7 @@ export const questions =
         name: 'twentyfour'
     },//
     twentyfive:{
-        title: "¿Qué precio sería accesible para ti pagar por estos servicios?",
+        title: "¿Cuánto estarías dispuesto a pagar por estos servicios?",
         type: "textarea",
         next: {
             disabled: true,

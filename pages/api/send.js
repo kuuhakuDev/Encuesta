@@ -4,8 +4,8 @@ export default async (req, res) => {
 
   const { db } = await connectToDatabase();
 
-  //console.log(req.body)
-  var reply = JSON.parse(req.body);
+  var reply = {}
+  reply.userreply = JSON.parse(req.body);
   reply.userdata = {}
   reply.userdata.cookie = req.headers.cookie
   reply.userdata.userAgent = req.headers['user-agent']
@@ -14,9 +14,9 @@ export default async (req, res) => {
 
   /* const mercado = await db
   .collection("estudio_mercado")
-  .insertOne(JSON.parse(req.body)) */
+  .insertOne(JSON.parse(req.body) */
 
-  //console.log(reply);
+  console.log(reply);
 
   function random() {
     return Math.random().toString(36).substr(2); // Eliminar `0.`

@@ -2,10 +2,11 @@ import React, {useContext, useEffect, useState} from 'react';
 import Grid from '@material-ui/core/Grid';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
-import {AppContext, questions} from '../questions'
+import {AppContext, ReplyContext} from '../questions'
 
 export default function Group(prop) {
     const [state, setState] = useContext(AppContext);
+    const [reply, setReply] = useContext(ReplyContext);
     const [value, setValue] = useState("");
 
     useEffect(() => {
@@ -28,6 +29,10 @@ export default function Group(prop) {
             back: state.back,
             name: state.name
         })
+
+        var r = reply;
+        r[state.name] = e.target.value;
+        setReply(r);
     }
 
     return (

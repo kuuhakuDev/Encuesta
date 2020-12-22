@@ -464,14 +464,14 @@ export default ({ children }) =>{
     );
 }
 
-export function BtnProvider({children}) {
-    const [state,setState] = useState({next: true, back: true});
+export function Reply({children}) {
+    const [state,setState] = useState({});
     return (
-            <BtnContext.Provider value={[state,setState]}>
+            <ReplyContext.Provider value={[state,setState]}>
                 {children}
-            </BtnContext.Provider>
+            </ReplyContext.Provider>
     );
 }
 
 export const AppContext = createContext(questions.zero);
-export const BtnContext = createContext({next: true, back: true});
+export const ReplyContext = createContext({});

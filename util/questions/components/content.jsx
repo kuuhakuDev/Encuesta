@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Radio from './radio';
 
-import {AppContext, questions} from '../questions';
+import {AppContext} from '../questions';
 
 import Text from './text';
 import Number from './number';

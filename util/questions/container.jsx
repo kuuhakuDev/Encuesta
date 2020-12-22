@@ -2,13 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 
-import Provider, {questions, BtnProvider} from './questions';
+import Provider, {questions, Reply} from './questions';
 
 import Content from './components/content';
 import KButton from './components/button'
-import Title from './components/title'; 
+import Title from './components/title';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +28,7 @@ export default function ComplexGrid(prop) {
       <Paper className={classes.paper}>
         <Grid container spacing={2}>
           <Provider>
-            <BtnProvider>
+            <Reply>
               <Grid item direction="column" container>
                 <Grid item style={{marginBottom: "15px"}}>
                     <Title/>
@@ -37,7 +36,7 @@ export default function ComplexGrid(prop) {
                   <Content value={questions.zero}/>
                   <KButton/>
               </Grid>
-            </BtnProvider>
+            </Reply>
           </Provider>
         </Grid>
       </Paper>

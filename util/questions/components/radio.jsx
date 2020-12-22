@@ -6,10 +6,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import TextField from '@material-ui/core/TextField';
-import {AppContext, questions} from '../questions'
+import { AppContext, ReplyContext } from '../questions'
 
 export default function Group(prop) {
     const [state, setState] = useContext(AppContext);
+    const [reply, setReply] = useContext(ReplyContext);
     const [check, setCheck] = useState({});
     const [textDisabled, setTextDisabled] = useState(true);
 
@@ -44,6 +45,9 @@ export default function Group(prop) {
             back: state.back,
             name: state.name
         })
+        var r = reply;
+        r[state.name] = e.target.value;
+        setReply(r);
     }
 
     function onChange(e){
@@ -61,6 +65,9 @@ export default function Group(prop) {
             back: state.back,
             name: state.name
         })
+        var r = reply;
+        r[state.name] = e.target.value;
+        setReply(r);
     }
 
     return (

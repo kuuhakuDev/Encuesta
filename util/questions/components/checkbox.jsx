@@ -5,12 +5,13 @@ import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import {AppContext} from '../questions'
+import { AppContext, ReplyContext } from '../questions'
 
 export default function CheckboxesGroup(prop) {
 
   const [state, setState] = useState(prop.content.map((con) => [con, false]));
   const [context, setContext] = useContext(AppContext);
+  const [reply, setReply] = useContext(ReplyContext);
 
   useEffect(() => {
     var c = prop.content.map((con) => [con, false]);
@@ -40,6 +41,10 @@ export default function CheckboxesGroup(prop) {
       back: context.back,
       name: context.name
     })
+
+    var r = reply;
+    r[context.name] = state;
+    setReply(r);
   };
 
   return (

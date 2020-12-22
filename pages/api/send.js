@@ -9,8 +9,6 @@ export default async (req, res) => {
   reply.userdata = {}
   reply.userdata.cookie = req.headers.cookie
   reply.userdata.userAgent = req.headers['user-agent']
-  reply.userdata.ua = req.headers['sec-ch-ua']
-  reply.userdata.uaMov = req.headers['sec-ch-ua-mobile']
   reply.userdata.contentType = req.headers['content-type']
   reply.userdata.lenguage = req.headers['accept-language']
 
@@ -18,8 +16,7 @@ export default async (req, res) => {
   .collection("estudio_mercado")
   .insertOne(JSON.parse(req.body)) */
 
-  console.log(reply);
-  console.log(req.headers);
+  //console.log(reply);
 
   function random() {
     return Math.random().toString(36).substr(2); // Eliminar `0.`

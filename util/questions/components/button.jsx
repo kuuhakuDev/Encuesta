@@ -24,7 +24,7 @@ function KButton() {
         e.preventDefault();
         setState(questions[state.next.index]);
 
-        if(state.name != 'finish'){
+        if(state.name == 'finish'){
             var origin = document.location.origin;
             var url = origin + '/api/send';
             var data = reply;

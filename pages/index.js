@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Encuesta sobre webs</title>
         <link rel="icon" href="/favicon.ico" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-B58ERDK4XC"/>
         <script

@@ -12,9 +12,9 @@ export default async (req, res) => {
   reply.userdata.contentType = req.headers['content-type']
   reply.userdata.lenguage = req.headers['accept-language']
 
-  /* const mercado = await db
+  const mercado = await db
   .collection("estudio_mercado")
-  .insertOne(JSON.parse(req.body) */
+  .insertOne(reply)
 
   console.log(reply);
 
